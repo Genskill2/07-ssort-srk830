@@ -1,19 +1,19 @@
 void swap_max(int a[], int l, int n) {
-  int max = a[l];
-  int max_pos = l;
-  for(int i = l+1; i < n; i++) {
+  int max = a[n];
+  int max_pos = n;
+  for(int i = n+1; i < l; i++) {
     if(a[i] > max) {
       max = a[i];
       max_pos = i;
     }
   }
-  a[l] += a[max_pos];
-  a[max_pos] = a[l] - a[max_pos];
-  a[l] -= a[max_pos];
+  a[n] += a[max_pos];
+  a[max_pos] = a[n] - a[max_pos];
+  a[n] -= a[max_pos];
 }
 
-void ssort(int a[], int n) {
-  for(int i = 0; i < n; i++) {
-    swap_max(a, n, i);
+void ssort(int a[], int l) {
+  for(int i = 0; i < l; i++) {
+    swap_max(a, l, i);
   }
 } 
