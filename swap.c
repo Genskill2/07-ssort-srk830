@@ -14,6 +14,6 @@ void swap_max(int a[], int l, int n) {
 
 void ssort(int a[], int n) {
   for(int i = 0; i < n; i++) {
-    swap_max(a, i, n);
+    swap_max(a, n, i);
   }
 } 
