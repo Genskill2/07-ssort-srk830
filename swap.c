@@ -1,6 +1,6 @@
 void swap_max(int a[], int l, int n) {
   int max = a[l];
-  int max_pos = 0;
+  int max_pos = l;
   for(int i = l+1; i < n; i++) {
     if(a[i] > max) {
       max = a[i];
